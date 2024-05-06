@@ -8,7 +8,6 @@ function Login() {
    const [password , checkPassword] = useState();
    const navigate = useNavigate();
    const handleSubmit = (e) =>{
-    console.log("fucking worked");
     e.preventDefault();
        axios.post("http://localhost:3000/routes/login",{email,password})
        .then((response)=>{console.log(response); navigate(".././home");})
